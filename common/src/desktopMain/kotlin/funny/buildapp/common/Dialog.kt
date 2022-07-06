@@ -28,6 +28,5 @@ actual fun AppDialog(content: String, modifier: Modifier, onDismiss: () -> Unit)
                 Text("OK")
             }
         }
-
     })
 }
