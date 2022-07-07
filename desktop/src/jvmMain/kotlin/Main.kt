@@ -14,7 +14,7 @@ import funny.buildapp.common.App
 
 
 fun main() = application {
-    Window(onCloseRequest = ::exitApplication) {
+    Window(onCloseRequest = ::exitApplication, title = "Chat Room") {
         App()
     }
 }

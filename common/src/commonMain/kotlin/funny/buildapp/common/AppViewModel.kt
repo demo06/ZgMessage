@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
-class AppViewModel() {
+class AppViewModel {
     private val _chatContent = MutableStateFlow("")
     val chatContent: Flow<String>
         get() = _chatContent
@@ -29,4 +29,18 @@ class AppViewModel() {
     private val _nameDialogStatus = MutableStateFlow(false)
     val nameDialogStatus: Flow<Boolean>
         get() = _nameDialogStatus
+
+
+    fun changeRoomName(roomName: String) {
+        _roomName.value = roomName
+    }
+
+    fun appendChat(content: String) {
+        if (content.isNotBlank()) _chatContent.value += "\n$content"
+    }
+
+    fun resetChat(content: String) {
+        if (content.isNotBlank()) _chatContent.value = "\n$content"
+    }
+
 }
