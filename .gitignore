@@ -32,5 +32,4 @@ bin/
 ### Mac OS ###
 .DS_Store
 
-local.properties
-.index
+/local.properties
